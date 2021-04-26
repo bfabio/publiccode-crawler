@@ -28,6 +28,7 @@ jobs:
         with:
           fetch-depth: 1
 
+      - run: ls -la
       - name: Get Docker image tags
         id: image_tags
         run: |
