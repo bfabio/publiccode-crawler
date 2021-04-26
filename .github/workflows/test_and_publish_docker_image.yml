@@ -25,6 +25,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
 
       - name: Get Docker image tags
         id: image_tags
