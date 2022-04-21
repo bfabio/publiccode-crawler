@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/ghodss/yaml"
-	"github.com/italia/developers-italia-backend/crawler/elastic"
+	"github.com/italia/developers-italia-backend/elastic"
 	es "github.com/olivere/elastic/v7"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
