@@ -1,0 +1,356 @@
+- id: csi_piem
+  name: csi_piem
+  orgs:
+    - https://github.com/Nivola/
+    - https://github.com/csipiemonte
+    - https://github.com/unica-open
+  repos: []
+- id: ingv
+  name: ingv
+  orgs:
+    - https://github.com/INGV
+  repos: []
+- id: r_piemon
+  name: r_piemon
+  orgs:
+    - https://github.com/SITA-RegionePiemonte
+    - https://github.com/yucca-sdp
+    - https://github.com/regione-piemonte
+  repos: []
+- id: cnr
+  name: cnr
+  orgs:
+    - https://github.com/consiglionazionaledellericerche
+  repos: []
+- id: unical
+  name: unical
+  orgs:
+    - https://github.com/UniversitaDellaCalabria
+  repos: []
+- id: c_l736
+  name: c_l736
+  orgs:
+    - https://bitbucket.org/Comune_Venezia
+  repos: []
+- id: c_h294
+  name: c_h294
+  orgs:
+    - https://github.com/comunedirimini
+  repos: []
+- id: p_tn
+  name: p_tn
+  orgs:
+    - https://github.com/ProvinciaAutonomaTrento
+  repos: []
+- id: p_bz
+  name: p_bz
+  orgs:
+    - https://gitlab.fuss.bz.it/fuss
+  repos: []
+- id: p_cr
+  name: p_cr
+  orgs:
+    - https://github.com/provinciadicremona
+  repos: []
+- id: r_umbria
+  name: r_umbria
+  orgs:
+    - https://github.com/RegioneUmbria
+  repos: []
+- id: citsrl
+  name: citsrl
+  orgs:
+    - https://github.com/consorzioit
+  repos: []
+- id: c_a116
+  name: c_a116
+  orgs:
+    - https://gitlab.com/comune-di-ala
+  repos: []
+- id: arpap
+  name: arpap
+  orgs:
+    - https://github.com/arpa-puglia
+  repos: []
+- id: sissa
+  name: sissa
+  orgs:
+    - https://github.com/sissaschool
+  repos: []
+- id: udsm_me
+  name: udsm_me
+  orgs:
+    - https://github.com/unime
+    - https://github.com/MDSLab
+  repos: []
+- id: uni_rm2
+  name: uni_rm2
+  orgs:
+    - https://bitbucket.org/art-uniroma2
+  repos: []
+- id: auslre
+  name: auslre
+  orgs:
+    - https://github.com/AUSL-ReggioEmilia
+  repos: []
+- id: asl_bo
+  name: asl_bo
+  orgs:
+    - https://github.com/Azienda-USL-di-Bologna
+  repos: []
+- id: agid
+  name: agid
+  orgs:
+    - https://github.com/AgID
+  repos: []
+- id: r_marche
+  name: r_marche
+  orgs:
+    - https://github.com/regione-marche
+  repos: []
+- id: esrsris
+  name: esrsris
+  orgs:
+    - https://github.com/agenziaentrateriscossione
+  repos: []
+- id: p_ve
+  name: p_ve
+  orgs:
+    - https://github.com/CittaMetropolitanaVenezia
+  repos: []
+- id: uni_ct
+  name: uni_ct
+  orgs:
+    - https://github.com/UniCt-Easy/
+  repos: []
+- id: c_a182
+  name: c_a182
+  orgs:
+    - https://github.com/ComunediAlessandria
+  repos: []
+- id: c_f205
+  name: c_f205
+  orgs:
+    - https://github.com/Comune-Milano
+  repos: []
+- id: asl_2sav
+  name: asl_2sav
+  orgs:
+    - https://github.com/ASL2-Liguria
+  repos: []
+- id: r_emiro
+  name: r_emiro
+  orgs:
+    - https://github.com/RegioneER/
+  repos: []
+- id: umcn
+  name: umcn
+  orgs:
+    - https://github.com/UnioneMontanaCatriaNerone
+  repos: []
+- id: r_lombar
+  name: r_lombar
+  orgs:
+    - https://github.com/RegioneLombardia/
+  repos: []
+- id: c_h703
+  name: c_h703
+  orgs:
+    - https://riuso.comune.salerno.it
+  repos: []
+- id: azero
+  name: azero
+  orgs:
+    - https://github.com/aziendazero
+  repos: []
+- id: p_bs
+  name: p_bs
+  orgs:
+    - https://github.com/provincia-brescia
+  repos: []
+- id: c_l378
+  name: c_l378
+  orgs:
+    - https://github.com/ComuneTrento
+  repos: []
+- id: ispra_rm
+  name: ispra_rm
+  orgs:
+    - https://github.com/isprambiente
+  repos: []
+- id: c_a662
+  name: c_a662
+  orgs:
+    - https://github.com/comunedibari
+  repos: []
+- id: r_basili
+  name: r_basili
+  orgs:
+    - https://github.com/RegioneBasilicata
+  repos: []
+- id: pcm
+  name: pcm
+  orgs:
+    - https://github.com/dipartimentofunzionepubblica
+  repos: []
+- id: c_b354
+  name: c_b354
+  orgs:
+    - https://gitlab.com/comunedicagliari
+  repos: []
+- id: c_d612
+  name: c_d612
+  orgs:
+    - https://github.com/ComuneFI
+  repos: []
+- id: c_d969
+  name: c_d969
+  orgs:
+    - https://github.com/comunedigenova
+  repos: []
+- id: arltl_0
+  name: arltl_0
+  orgs:
+    - https://bitbucket.org/_darti/ssd-arti
+  repos: []
+- id: r_lazio
+  name: r_lazio
+  orgs:
+    - https://github.com/RegioneLazioPC
+  repos: []
+- id: usucb
+  name: usucb
+  orgs:
+    - https://github.com/uniurbit
+  repos: []
+- id: r_lomb
+  name: r_lomb
+  orgs:
+    - https://github.com/Consiglio-Regionale-della-Lombardia
+  repos: []
+- id: atsmetmi
+  name: atsmetmi
+  orgs:
+    - https://github.com/atsmilano
+  repos: []
+- id: arpa
+  name: arpa
+  orgs:
+    - https://github.com/ARPA-SIMC/
+    - https://github.com/Arpae-it
+  repos: []
+- id: cmdrc
+  name: cmdrc
+  orgs:
+    - https://github.com/cmdrc
+  repos: []
+- id: m_amte
+  name: m_amte
+  orgs:
+    - https://github.com/MATTM-VA
+  repos: []
+- id: c_f132
+  name: c_f132
+  orgs:
+    - https://github.com/comunedimerano
+  repos: []
+- id: c_f158
+  name: c_f158
+  orgs:
+    - https://github.com/ComuneDiMessina
+  repos: []
+- id: c_a944
+  name: c_a944
+  orgs:
+    - https://github.com/ComuneBologna
+  repos: []
+- id: crpuglia
+  name: crpuglia
+  orgs:
+    - https://gitlab.consiglio.puglia.it/
+  repos: []
+- id: c_l219
+  name: c_l219
+  orgs:
+    - https://github.com/comune-torino
+  repos: []
+- id: c_f152
+  name: c_f152
+  orgs:
+    - https://github.com/comunedimesagne
+  repos: []
+- id: inrm
+  name: inrm
+  orgs:
+    - https://github.com/inrim
+  repos: []
+- id: ccrfcr
+  name: ccrfcr
+  orgs:
+    - https://github.com/CameraCommercioRomagna
+  repos: []
+- id: p_ag
+  name: p_ag
+  orgs:
+    - https://github.com/Libero-Consorzio-Comunale-di-Agrigento
+  repos: []
+- id: data
+  name: data
+  orgs:
+    - https://github.com/Liguria-Digitale
+  repos: []
+- id: sns_pi
+  name: sns_pi
+  orgs:
+    - https://github.com/ScuolaNormaleSuperiore
+  repos: []
+- id: m_ae
+  name: m_ae
+  orgs:
+    - https://github.com/maecidgai08
+  repos: []
+- id: c_h355
+  name: c_h355
+  orgs:
+    - https://github.com/ComuneDiRivoli
+  repos: []
+- id: estar
+  name: estar
+  orgs:
+    - https://github.com/ESTAR2021/
+  repos: []
+- id: inpu
+  name: inpu
+  orgs:
+    - https://oros-git.regione.puglia.it/innovapuglia
+  repos: []
+- id: r_puglia
+  name: r_puglia
+  orgs:
+    - https://oros-git.regione.puglia.it/regione-puglia
+  repos: []
+- id: c_a859
+  name: c_a859
+  orgs:
+    - https://github.com/ComunediBiella
+  repos: []
+- id: c_d548
+  name: c_d548
+  orgs:
+    - https://github.com/ComuneDiFerrara
+  repos: []
+- id: arpa_09
+  name: arpa_09
+  orgs:
+    - https://github.com/ARPA-VdA
+  repos: []
+- id: r_veneto
+  name: r_veneto
+  orgs:
+    - https://github.com/RegioneDelVeneto
+  repos: []
+- id: r_campan
+  name: r_campan
+  orgs:
+    - https://github.com/regione-campania
+  repos: []

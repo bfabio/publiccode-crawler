@@ -1,0 +1,16 @@
+on:
+  workflow_dispatch:
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    container:
+      image: italia/developers-italia-backend:api
+    steps:
+      - uses: actions/checkout@v2
+      - run: developers-italia-backend crawl publishers*.yml
+        env:
+          CRAWLER_DATADIR: /tmp/data
+          API_BASEURL: "https://api.developers.italia.it/v1"
+          API_BEARER_TOKEN: ${{ secrets.API_BEARER_TOKEN }}
+          SKIP_VITALITY: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
