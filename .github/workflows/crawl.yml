@@ -4,7 +4,7 @@ jobs:
   crawl:
     runs-on: ubuntu-latest
     container:
-      image: italia/developers-italia-backend:api
+      image: italia/publiccode-crawler:latest
     steps:
       - uses: actions/checkout@v2
       - run: developers-italia-backend crawl publishers*.yml
