@@ -11,12 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-go@v2
         with:
-          go-version: '1.17'
-
-      - run: make build
-      - run: make test
+          # The build job will use the .git directory to
+          # infer the current version to embed in the binary
+          fetch-depth: 0
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '1.18'
+      - run: go build
+      - run: go test -race ./...
 
   build_and_publish_docker_image:
     needs: test
@@ -34,7 +37,7 @@ jobs:
       - name: Get Docker image tags
         id: image_tags
         run: |
-          IMAGE=italia/developers-italia-backend
+          IMAGE=italia/publiccode-crawler
 
           TAGS=${IMAGE}:latest
           TAGS="$TAGS,${IMAGE}:${GITHUB_SHA::8}"
