@@ -34,9 +34,7 @@ func CloneRepository(hostname, name, gitURL, index string) error {
 		return nil
 	}
 
-	// Clone the repository using the external command "git".
-	// Command is: git clone -b <branch> <remote_repo>
-	out, err := exec.Command("git", "clone", gitURL, path).CombinedOutput() // nolint: gas
+	out, err := exec.Command("git", "clone", "--filter=blob:none", "--mirror", gitURL, path).CombinedOutput()
 	if err != nil {
 		return fmt.Errorf("cannot git clone the repository: %s: %s", err.Error(), out)
 	}
