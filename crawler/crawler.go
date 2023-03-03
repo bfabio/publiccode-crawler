@@ -21,7 +21,7 @@ import (
 	publiccode "github.com/italia/publiccode-parser-go/v3"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
-	"golang.org/x/exp/slices"
+	_ "golang.org/x/exp/slices"
 )
 
 // Crawler is a helper class representing a crawler.
@@ -364,7 +364,7 @@ func (c *Crawler) ProcessRepo(repository common.Repository) {
 	}
 
 	var aliases []string
-	url := repository.CanonicalURL.String()
+	// url := repository.CanonicalURL.String()
 
 	// If the URL of the repo we have is different from the canonical URL
 	// we got from the code hosting API, it means the repo got renamed, so we
@@ -373,36 +373,36 @@ func (c *Crawler) ProcessRepo(repository common.Repository) {
 		aliases = append(aliases, repository.URL.String())
 	}
 
-	publiccodeYml, err := parser.ToYAML()
-	if err != nil {
-		logEntries = append(logEntries, fmt.Sprintf("[%s] parsing error: %s", repository.Name, err.Error()))
+	// publiccodeYml, err := parser.ToYAML()
+	// if err != nil {
+	// 	logEntries = append(logEntries, fmt.Sprintf("[%s] parsing error: %s", repository.Name, err.Error()))
 
-		return
-	}
+	// 	return
+	// }
 
-	if software == nil {
-		metrics.GetCounter("repository_new", c.Index).Inc()
-		if !c.DryRun {
-			_, err = c.apiClient.PostSoftware(url, aliases, string(publiccodeYml))
-		}
-	} else {
-		for _, alias := range software.Aliases {
-			if !slices.Contains(aliases, alias) {
-				aliases = append(aliases, alias)
-			}
-		}
+	// if software == nil {
+	// 	metrics.GetCounter("repository_new", c.Index).Inc()
+	// 	if !c.DryRun {
+	// 		_, err = c.apiClient.PostSoftware(url, aliases, string(publiccodeYml))
+	// 	}
+	// } else {
+	// 	for _, alias := range software.Aliases {
+	// 		if !slices.Contains(aliases, alias) {
+	// 			aliases = append(aliases, alias)
+	// 		}
+	// 	}
 
-		metrics.GetCounter("repository_known", c.Index).Inc()
-		if !c.DryRun {
-			_, err = c.apiClient.PatchSoftware(software.ID, url, aliases, string(publiccodeYml))
-		}
-	}
-	if err != nil {
-		logEntries = append(logEntries, fmt.Sprintf("[%s]: %s", repository.Name, err.Error()))
-		metrics.GetCounter("repository_upsert_failures", c.Index).Inc()
-	}
+	// 	metrics.GetCounter("repository_known", c.Index).Inc()
+	// 	if !c.DryRun {
+	// 		_, err = c.apiClient.PatchSoftware(software.ID, url, aliases, string(publiccodeYml))
+	// 	}
+	// }
+	// if err != nil {
+	// 	logEntries = append(logEntries, fmt.Sprintf("[%s]: %s", repository.Name, err.Error()))
+	// 	metrics.GetCounter("repository_upsert_failures", c.Index).Inc()
+	// }
 
-	if !viper.GetBool("SKIP_VITALITY") && !c.DryRun {
+	if !viper.GetBool("SKIP_VITALITY") /*&& !c.DryRun*/ {
 		// Clone repository.
 		err = git.CloneRepository(repository.URL.Host, repository.Name, parser.PublicCode.URL.String(), c.Index)
 		if err != nil {

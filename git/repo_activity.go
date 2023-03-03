@@ -2,6 +2,7 @@ package git
 
 import (
 	"errors"
+	"fmt"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -97,12 +98,22 @@ func CalculateRepoActivity(repository common.Repository, days int) (float64, map
 	}
 
 	for i := 0; i < days; i++ {
+		fmt.Printf("day: %d unique authors: %4.0f\tcommit / merges: %4.0f\ttags: %4.0f\n", i, userCommunityLastDays(commitsLastDays[i]),
+			activityLastDays(commitsPerDay[i]), releaseHistoryLastDays(tagsPerDays[i]),
+
+	)
 		userCommunity = ranges("userCommunity", userCommunityLastDays(commitsLastDays[i]))
 
 		codeActivity = ranges("codeActivity", activityLastDays(commitsPerDay[i]))
+
 		releaseHistory = ranges("releaseHistory", releaseHistoryLastDays(tagsPerDays[i]))
 
 		repoActivity = userCommunity + codeActivity + releaseHistory + ranges("longevity", longevity)
+
+		// fmt.Printf(
+		// 	"[%s] day: %d tags: %d userCommunity: %.2f codeActivity: %.2f releaseHistory: %.2f longevity: %.2f. TOTAL: %.2f\n",
+		// 	repository.Name, i, len(tagsPerDays[i]), userCommunity, codeActivity, releaseHistory, ranges("longevity", longevity), repoActivity,
+		// )
 		if repoActivity > 100 {
 			repoActivity = 100
 		}
@@ -123,6 +134,7 @@ func userCommunityLastDays(commits []*object.Commit) float64 {
 	totalAuthors := map[string]int{}
 	// Iterates over the commits and extract infos.
 	for _, c := range commits {
+		// fmt.Printf("%s\n", c.Author.Email)
 		totalAuthors[c.Author.Email]++
 	}
 
@@ -265,6 +277,7 @@ func ranges(name string, value float64) float64 {
 		if v.Name == name {
 			for _, r := range v.Ranges {
 				if value >= r.Min && value < r.Max {
+					fmt.Printf("  %s\t\t%5.0f <= %5.0f < %5.0f => %5.0f points\n", name, r.Min, value, r.Max, r.Points)
 					return r.Points
 				}
 			}
